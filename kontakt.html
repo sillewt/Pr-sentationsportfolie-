@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="da">
+  <!--da betyder hjemmesiden er dansk-->
+  <head>
+    <meta charset="UTF-8" />
+    <!--UTF-8 gør, at siden kan vise specialtegn korrekt.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- IKONER -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Kontakt | Sille Wærnskjold-Thiesen</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img src="billeder/logo.png" alt="Logo" />
+      </a>
+
+      <input type="checkbox" id="menu-toggle" />
+
+      <label for="menu-toggle" class="menu-icon">
+        <!--span bliver til de tre streger i hamburger-menuen.-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="index.html">Forside</a>
+        <a href="ommig.html">Om mig</a>
+        <a href="./index.html#projekter">Projekter</a>
+        <!--class="active" viser hvilken side man er på.-->
+        <a href="kontakt.html" class="active">KONTAKT MIG</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- KONTAKT -->
+      <section class="kontakt">
+        <div class="kontakt-img"></div>
+
+        <div class="kontakt-content">
+          <h2>Kontakt mig</h2>
+
+          <div class="kontakt-items">
+            <div class="kontakt-item">
+              <h4>Adresse</h4>
+              <p>Seebladsgade 1, Odense, Danmark</p>
+            </div>
+
+            <div class="kontakt-item">
+              <h4>Mail</h4>
+              <p>sillewt@gmail.com</p>
+            </div>
+
+            <div class="kontakt-item">
+              <h4>Telefonnummer</h4>
+              <p>+45 22 77 56 72</p>
+            </div>
+          </div>
+
+          <div class="kontakt-bottom">
+            <div class="kontakt-icons">
+              <a href="https://www.facebook.com/sille.thiesen" target="_blank">
+                <i class="lab la-facebook"></i>
+              </a>
+
+              <a href="https://www.instagram.com/sillethiesen/" target="_blank">
+                <i class="lab la-instagram"></i>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/sille-w%C3%A6rnskjold-thiesen-27475b203/"
+                target="_blank"
+              >
+                <i class="lab la-linkedin"></i>
+              </a>
+            </div>
+
+            <!-- mailto: gør at der åbnes en mail til den mailadresse der står bagefter -->
+            <!-- ?subject= bruges til at tilføje en emnelinje automatisk i mailen. -->
+            <!-- %20 betyder mellemrum i URL’er -->
+            <a
+              href="mailto:sillewt@gmail.com?subject=Forespørgsel%20fra%20portfolio"
+              class="kontakt-cta"
+            >
+              lad os arbejde sammen
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Sille Wærnskjold-Thiesen</p>
+
+      <div class="footer-links">
+        <a href="./ommig.html">Om mig</a>
+        <a href="./index.html#projekter">Projekter</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sille Wærnskjold-Thiesen</p>
+      </div>
+    </footer>
+  </body>
+</html>

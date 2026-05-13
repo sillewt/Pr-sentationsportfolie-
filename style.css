@@ -1,0 +1,1273 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* * betyder alle elementer på siden er valgt*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grundstyling for hele siden */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f7f6f2;
+  color: #111;
+}
+
+/* HEADER */
+/* Headeren indeholder logo og navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 38px;
+  border-bottom: 1px solid #eae7e2;
+
+  /* sticky gør at menuen følger med*/
+  position: sticky;
+  /* top 0 gør at den stopper helt i toppen */
+  top: 0;
+  z-index: 9999;
+
+  background: #f7f6f2;
+}
+
+/* Logoet er klikbart og sender brugeren tilbage til forsiden */
+.logo {
+  font-size: 20px;
+  letter-spacing: 4px;
+
+  display: inline-flex; /* NY */
+  align-items: center; /* NY */
+  position: relative; /* NY */
+  z-index: 2000; /* NY */
+}
+
+/* Styrer logoets størrelse */
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+/* Checkboxen bruges til at åbne/lukke mobilmenuen uden JavaScript */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburgerikonet på mobil */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* De tre streger i hamburgerikonet */
+.menu-icon span {
+  width: 32px;
+  height: 2px;
+  background: #111;
+  display: block;
+}
+
+/* FULLSCREEN MENU - MOBIL */
+/* Mobilmenuen fylder hele skærmen, men er skjult som standard */
+.nav {
+  position: fixed;
+  inset: 0;
+  background: #f7f6f2;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  z-index: 1000;
+}
+
+/* Styling af links i menuen */
+.nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 42px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Laver en lille underline-effekt under menupunkter */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 1px;
+  background: #111;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+/* Underline bliver synlig ved hover */
+.nav a:hover::after {
+  width: 60%;
+}
+
+/* Hoverfarve på menulinks */
+.nav a:hover {
+  color: #cfc4b6;
+  font-weight: 700;
+}
+
+/* Active viser hvilken side brugeren er på */
+.nav a.active {
+  color: #cfc4b6;
+  font-weight: 700;
+}
+
+/* Når checkboxen er checked, vises mobilmenuen */
+#menu-toggle:checked ~ .nav {
+  display: flex;
+}
+
+/* HAMBURGER BLIVER TIL X */
+/* Når menuen er åben, bliver de tre streger til et kryds */
+#menu-toggle:checked + .menu-icon span {
+  background: #111;
+}
+
+/* Første streg roteres */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+/* Midterste streg skjules */
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+/* Nederste streg roteres modsat */
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Generel knapklasse */
+.btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+}
+
+/* HERO */
+/* Første sektion på forsiden med billede, overskrift, tekst og CTA */
+.hero {
+  padding: 55px 38px 80px;
+}
+
+/* Hero-billedet er sat ind via CSS for bedre kontrol over beskæring og layout */
+.hero-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: none;
+  margin-bottom: 45px;
+
+  background-image: url("billeder/mig9.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Stor overskrift i hero */
+.hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.25;
+  margin-bottom: 35px;
+}
+
+/* Brødtekst i hero */
+.hero-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-bottom: 45px;
+}
+
+/* Sort CTA-knap */
+.hero-btn {
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #111;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* Hover-effekt på CTA-knap */
+.hero-btn:hover {
+  background-color: #cfc4b6;
+  border: 1px solid #111;
+  color: #111;
+  transition: 0.3s;
+}
+
+/* INFO */
+/* Kompetence-sektion med billede og liste */
+.info {
+  padding: 40px 38px;
+}
+
+/* Billedet er et layoutbillede sat ind via CSS */
+.info-img {
+  width: 100%;
+  height: 300px; /* ← ændr størrelse her */
+  margin-bottom: 20px;
+
+  background-image: url("billeder/mig10.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overskrift til kompetencelinjer */
+.info-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 35px;
+  line-height: 1.1;
+}
+
+/* Kompetencelinjer */
+.info-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e2dc;
+  text-transform: uppercase;
+  color: #111;
+}
+
+/* PROJEKTER */
+/* Projektsektion på forsiden */
+.projekter {
+  padding: 40px 38px;
+
+  /* Gør at anchor-linket stopper lidt før sektionen, så sticky header ikke dækker overskriften */
+  scroll-margin-top: 140px;
+}
+
+/* Grid til projektkort. Mobile first: 1 kolonne */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Hvert projektkort */
+.project-card {
+  max-width: 100%;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Projektbilleder. object-fit: cover beskærer billederne pænt i samme format */
+.project-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tekst under projekter */
+.project-text {
+  text-align: center;
+  padding-top: 18px;
+}
+
+/* Lille tekst over overskrift, “MINE” */
+.overline {
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 4px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+/* Stor projekttitel */
+.projekter h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Projekttitel under billede */
+.project-text h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Projektbeskrivelse */
+.project-text p {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+/* Fjerner standard link-styling og gør hele projektkortet klikbart */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Hover-effekt på projektbilleder */
+.project-link:hover .project-card img {
+  opacity: 0.65;
+  filter: brightness(0.9);
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+/* KONTAKT */
+/* Kontaktsektionens mobil-layout */
+.kontakt {
+  padding: 40px 38px;
+  border-top: 1px solid #e5e2dc;
+  margin-top: 40px;
+}
+
+/* BILLEDE i Kontakt mig side */
+/* Kontaktbillede sat ind via CSS for at kunne styre størrelse og beskæring */
+.kontakt-img {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 20px;
+
+  background-image: url("billeder/mig6.jpg");
+  background-size: cover;
+  /* % betyder hvilke del på billede man vil se */
+  background-position: center 55%;
+}
+
+/* CONTENT */
+/* Kontaktoverskrift */
+.kontakt-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 65px;
+  margin-bottom: 35px;
+}
+
+/* Lille justering af indholdets placering */
+.kontakt-content {
+  padding: 0 1px;
+}
+
+/* LISTE */
+/* Kontaktinformationer ligger under hinanden på mobil */
+.kontakt-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+/* Små labels som Adresse, Mail, Telefonnummer */
+.kontakt-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Selve kontaktteksten */
+.kontakt-item p {
+  font-size: 18px;
+  color: #555;
+}
+/* lad os arbejde sammen tekst i kontakt mig */
+.kontakt-cta {
+  display: block;
+  width: fit-content;
+  margin: 0 0 0 auto;
+
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #111; /* gør teksten sort */
+  text-decoration: none; /* fjerner default underline */
+
+  border-bottom: 1px solid #111; /* din egen streg */
+  padding-bottom: 6px;
+}
+
+/* Hover på kontakt CTA */
+.kontakt-cta:hover {
+  color: #cfc4b6;
+}
+
+/* IKONER */
+/* Sociale ikoner */
+.kontakt-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 35px;
+  font-size: 40px;
+  margin: 35px 0 30px;
+}
+
+/* Links omkring ikoner */
+.kontakt-icons a {
+  display: inline-flex;
+  color: #111;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Hoverfarve på ikoner */
+.kontakt-icons a:hover {
+  color: #cfc4b6;
+}
+
+/* OM MIG SIDE */
+/* Sektionen på om mig-siden */
+.about-page {
+  padding: 55px 38px 80px;
+}
+
+/* Om mig overskrift */
+.about-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Navn/underoverskrift */
+.about-text h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+/* Brødtekst på om mig-siden */
+.about-text p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* Jeg valgte background-image til hero- og layoutbillederne, fordi det var nemmere for mig
+at have kontrol over størrelse, beskæring og responsivt layout.*/
+.about-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-image: url("billeder/mig8.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+}
+
+/* PROGRAMMER */
+/* Sektion med programmer og værktøjer */
+.programmer {
+  padding: 90px 38px 10px;
+  text-align: center;
+}
+
+/* Lille tekst over overskrift */
+.programmer .overline {
+  font-size: 22px;
+  letter-spacing: 8px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+/* Stor overskrift ligesom projekter */
+.programmer h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 82px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+/* Tekst under PROGRAMMER */
+.programmer-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #666;
+
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* Grid med 3 kolonner */
+.program-grid {
+  display: grid;
+
+  /* 3 ikoner ved siden af hinanden */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hvert programkort */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logoer */
+.program-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+/* Tekst under logo */
+.program-card p {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+/* Footer-sektion */
+/* Footeren afslutter siden med navn, navigation og copyright */
+.footer {
+  margin-top: 80px;
+  padding: 50px 38px;
+  border-top: 1px solid #e5e2dc;
+  text-align: center;
+}
+
+/* Styling af navn/overskrift i footeren */
+.footer p {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Navigation i footeren */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+/* Styling af links i footeren */
+.footer-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+/* Hover-effekt på footer-links */
+.footer-links a:hover {
+  color: #cfc4b6;
+}
+
+/* Lille tekst i footeren */
+.footer span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+/* Nederste del af footeren med copyright */
+.footer-bottom {
+  margin-top: 40px;
+}
+
+/* Styling af copyright-tekst */
+.footer-bottom p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #555;
+}
+
+/* ----------------------------------- */
+/* PROJEKTSIDER */
+/* ----------------------------------- */
+
+.ppage-hero {
+  padding: 40px 8% 70px;
+
+  background-color: #f7f6f2;
+}
+
+.ppage-image {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.ppage-image img {
+  width: 100%;
+  max-width: 430px;
+
+  height: auto;
+
+  display: block;
+}
+
+.ppage-text {
+  text-align: center;
+}
+
+.ppage-label {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  color: #8b8b8b;
+}
+
+.ppage-text h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 58px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+.ppage-text p {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+
+  color: #555;
+}
+
+/* SEKTION UNDER */
+
+.ppage-content {
+  padding: 20px 8% 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 70px;
+}
+
+.ppage-content h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 46px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  margin-bottom: 28px;
+
+  text-align: center;
+}
+
+.ppage-content p {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 300;
+
+  line-height: 2.1;
+
+  letter-spacing: 0.8px;
+
+  text-align: center;
+
+  color: #5c5c5c;
+
+  max-width: 320px;
+
+  margin: 0 auto;
+}
+
+/* SEKTIONER */
+.ppage-box {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+/* OVERSKRIFTER */
+.ppage-box h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+
+  text-align: left;
+}
+
+/* BRØDTEKST */
+.ppage-box p {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 300;
+
+  line-height: 2;
+
+  letter-spacing: 0.5px;
+
+  color: #5a5a5a;
+
+  text-align: left;
+
+  max-width: none;
+}
+
+.ppage-divider {
+  width: 500px;
+
+  height: 1px;
+
+  background-color: #cfc7be;
+
+  margin: 30px 0 60px 11%;
+}
+
+/* KNAP PÅ PROJEKTSIDE */
+.ppage-content .hero-btn {
+  display: inline-flex;
+
+  width: fit-content;
+
+  padding: 18px 34px;
+
+  margin-left: 0;
+
+  margin-top: 55px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+.ppage-box:last-child {
+  margin-bottom: 50px;
+}
+
+/* TABLET / DESKTOP */
+/* Alt herinde gælder kun skærme fra 768px og op */
+@media (min-width: 768px) {
+  /* Skjuler hamburgerikonet på større skærme */
+  .menu-icon {
+    display: none;
+  }
+
+  /* Giver siden en max-bredde og centrerer den */
+  main {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Gør headeren lavere på desktop */
+  .header {
+    padding: 18px 38px;
+  }
+
+  /* Navigationen i headeren på desktop */
+  /* Menuen bliver vist vandret i stedet for fullscreen som på mobil */
+  .nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    gap: 36px;
+    z-index: auto;
+  }
+
+  /* Styling af links i desktop-menuen */
+  .nav a {
+    color: #111;
+    font-size: 23px;
+    letter-spacing: 3px;
+  }
+
+  /* Active styling på desktop gøres mere neutral */
+  .nav a.active {
+    color: #111;
+    font-weight: 400;
+  }
+
+  /* Sidste menupunkt bliver til en sort CTA-knap */
+  .nav a:last-child {
+    background-color: #111;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 2px;
+    letter-spacing: 2px;
+  }
+  /* Hover på sort CTA-knap */
+  .nav a:last-child:hover {
+    background-color: #cfc4b6;
+    color: #111;
+  }
+
+  /* Fjerner underline-effekten fra CTA-knappen */
+  .nav a:last-child::after {
+    display: none;
+  }
+
+  /* Hero-sektion på forsiden */
+  /* Hero-sektionen bliver lavet som et 2-kolonne layout på desktop */
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 70px;
+    align-items: center;
+    padding: 90px 38px;
+  }
+
+  /* Justerer størrelsen på forside-billedet */
+  .hero-img {
+    width: 60%;
+    margin-bottom: 0;
+  }
+
+  /* Justerer bredden på tekst-indholdet */
+  .hero-text {
+    width: 42%;
+  }
+
+  /* Styling af den store overskrift i hero-sektionen */
+  .hero-text h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+  }
+
+  /* Styling af brødteksten i hero-sektionen */
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* Kompetence-sektion på forsiden */
+  /* Sektionen bliver lavet som et 2-kolonne layout på desktop */
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 80px 38px;
+  }
+
+  /* Justerer størrelsen på billedet i kompetence-sektionen */
+  .info-img {
+    width: 100%;
+    height: 520px;
+    margin-bottom: 0;
+  }
+
+  /* Centrerer teksten lodret ved siden af billedet */
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Styling af tekstlinjerne i info-sektionen */
+  .info-text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e5e2dc;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  /* Projekter vises i 2 kolonner på desktop */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  /* Kontakt desktop-layout */
+  .kontakt {
+    border-top: none;
+    outline: none;
+    padding-top: 0;
+  }
+
+  /* Fjerner ekstra pseudo-element/streg over sektionen */
+  .kontakt::before {
+    display: none;
+  }
+
+  /* Styling og placering af kontaktbilledet på desktop */
+  .kontakt-img {
+    width: 100%;
+    height: 420px;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+  /* Sørger for at kontaktindholdet fylder hele containeren */
+  .kontakt-content {
+    max-width: 100%;
+  }
+
+  /* kontakt mig overskrift*/
+  .kontakt-content h2 {
+    font-size: 100px;
+    margin-bottom: 45px;
+  }
+
+  /* Kontaktinfo lægges i grid på desktop */
+  .kontakt-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 60px;
+    margin-bottom: 50px;
+  }
+
+  /* Kontaktinformationerne placeres manuelt i grid-layoutet på desktop */
+  .kontakt-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .kontakt-item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .kontakt-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Styling af overskrifter som Adresse, Mail og Telefonnummer */
+  .kontakt-item h4 {
+    font-size: 17px;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* Styling af selve kontaktteksten */
+  .kontakt-item p {
+    font-size: 22px;
+    line-height: 1.8;
+  }
+
+  /* Nederste del af kontaktsektionen bliver lavet som et grid på desktop */
+  .kontakt-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin-top: -40px;
+  }
+
+  /* Sociale ikoner placeres i højre kolonne og justeres visuelt */
+  .kontakt-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 28px;
+
+    grid-column: 2;
+
+    margin-top: -70px;
+    padding-left: 25px;
+  }
+
+  /* Gør ikonerne større på desktop */
+  .kontakt-icons a {
+    font-size: 42px;
+  }
+
+  /* CTA-link placeres nederst i højre side */
+  .kontakt-cta {
+    grid-column: 2;
+    justify-self: end;
+    margin-top: 1px;
+
+    font-size: 13px;
+    letter-spacing: 6px;
+  }
+
+  /* Om mig siden bliver 2 kolonner på desktop */
+  .about-page {
+    display: grid;
+    /* Laver 2 lige store kolonner */
+    grid-template-columns: 1fr 1fr;
+    /* Afstand mellem tekst og billede */
+    gap: 55px;
+    /* Sørger for at tekst og billede starter øverst */
+    align-items: start;
+  }
+
+  /* Fjerner ekstra luft over billedet på desktop */
+  .about-img {
+    margin-top: 0;
+  }
+}
+
+/* Stor hovedoverskrift "OM MIG" */
+.about-text h1 {
+  font-size: 72px;
+  /* Luft under overskriften */
+  margin-bottom: 20px;
+}
+
+/* Navn under overskriften */
+.about-text h3 {
+  font-size: 52px;
+  /* Luft mellem navn og brødtekst */
+  margin-bottom: 35px;
+  /* Gør teksten mindre fed */
+  font-weight: 400;
+}
+
+/* Brødtekst på om mig siden */
+.about-text p {
+  font-size: 18px;
+  /* Gør teksten mere læsevenlig */
+  line-height: 1.9;
+  /* Lille afstand mellem bogstaver */
+  letter-spacing: 0.5px;
+}
+
+/* stor tekst under projektbiller */
+.project-text h3 {
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+/* lille tekst under projektbiller  */
+.project-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* styler “MINE“ tekst under projekter på desktop  */
+.overline {
+  font-size: 22px;
+  letter-spacing: 8px;
+}
+
+/* styler “PROJEKTER“ overskrift under projekter på desktop  */
+.projekter h2 {
+  font-size: 82px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+/* PROGRAMMER - desktop layout */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Mere luft mellem logoerne */
+  gap: 90px 120px;
+
+  /* Gør sektionen bredere */
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* Gør logoerne større på desktop */
+.program-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+
+  margin-bottom: 22px;
+}
+
+/* Gør teksten større under logoerne */
+.program-card p {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+/* ----------------------------------- */
+/* PROJEKTSIDER */
+/* ----------------------------------- */
+/* Hele indholdsområdet på projektsiden */
+.ppage-content {
+  padding: 100px 0;
+
+  /* Lægger elementerne under hinanden */
+  display: flex;
+  flex-direction: column;
+
+  /* Luft mellem sektionerne */
+  gap: 60px;
+
+  /* Maks bredde på indholdet */
+  max-width: 900px;
+
+  /* Centrerer hele sektionen */
+  margin: 0 auto;
+}
+
+/* Container til projektbilledet */
+.ppage-image {
+  margin-bottom: 0;
+}
+
+/* Selve projektbilledet */
+.ppage-image img {
+  /* Maks størrelse på billedet */
+  max-width: 550px;
+  /* Luft under billedet */
+  margin-bottom: 20px;
+}
+
+/* Lille tekst over overskriften - Portfolio projekt - */
+.ppage-label {
+  /* Gør teksten til store bogstaver */
+  text-transform: uppercase;
+  /* Afstand mellem bogstaver */
+  letter-spacing: 2px;
+}
+
+/* Stor hovedoverskrift - title navn på projekt */
+.ppage-text h1 {
+  /* Størrelse på overskriften */
+  font-size: 70px;
+  /* Ingen ekstra bogstavafstand */
+  letter-spacing: 0;
+}
+
+/* Tekstområde øverst i en box */
+.ppage-text {
+  /* Fylder hele bredden */
+  width: 100%;
+  /* Maks bredde */
+  max-width: 900px;
+
+  /* Centrerer tekstboksen */
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* Brødtekst under overskriften */
+.ppage-text p {
+  /* Normal bogstavafstand */
+  letter-spacing: 0;
+  font-size: 20px;
+}
+
+/* Den tynde linje mellem sektionerne */
+.ppage-divider {
+  /* Bredden på linjen */
+  width: 700px;
+
+  /* Sørger for at den ikke går udenfor mobilen */
+  max-width: 100%;
+
+  /* Højde på linjen */
+  height: 1px;
+
+  background-color: #cfc7be;
+
+  /* Luft over og under + centrerer linjen */
+  margin: 70px auto;
+}
+
+/* Alt tekstindhold i indholdssektionen venstrestilles */
+.ppage-content h2,
+.ppage-content p {
+  text-align: left;
+}
+
+/* Boks til de nederste tekstsektioner */
+.ppage-box {
+  /* Bredde på tekstområdet */
+  width: 900px;
+
+  /* Responsiv på mindre skærme */
+  max-width: 100%;
+
+  /* top: 0 right: auto bottom: 20px left: 19px */
+  margin: 0 auto 20px 19px;
+}
+
+/* Overskrift i tekstboksene */
+.ppage-box h2 {
+  /* Venstrestiller overskriften */
+  text-align: left;
+  /* Fjerner ekstra venstre margin */
+  margin-left: 0;
+  /* Størrelse på overskrift */
+  font-size: 30px;
+}
+
+/* Brødtekst i tekstboksene */
+.ppage-box p {
+  /* Venstrestiller teksten */
+  text-align: left;
+  /* Fjerner ekstra venstre margin */
+  margin-left: 0;
+  /* Størrelse på brødtekst */
+  font-size: 20px;
+}

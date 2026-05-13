@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="da">
+  <!--da betyder hjemmesiden er dansk-->
+  <head>
+    <meta charset="UTF-8" />
+    <!--UTF-8 gør, at siden kan vise specialtegn korrekt.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- IKONER -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Om mig | Sille Wærnskjold-Thiesen</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img src="billeder/logo.png" alt="Logo" />
+      </a>
+
+      <input type="checkbox" id="menu-toggle" />
+
+      <label for="menu-toggle" class="menu-icon">
+        <!--span bliver til de tre streger i hamburger-menuen.-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="index.html">Forside</a>
+        <!--class="active" viser hvilken side man er på.-->
+        <a href="ommig.html" class="active">Om mig</a>
+        <a href="./index.html#projekter">Projekter</a>
+        <a href="kontakt.html">KONTAKT MIG</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- OM MIG -->
+      <section class="about-page">
+        <!-- TEKST -->
+        <div class="about-text">
+          <h1>OM MIG</h1>
+
+          <h3>Sille Wærnskjold-Thiesen</h3>
+
+          <p>
+            Mit navn er Sille Wærnskjold-Thiesen, og jeg studerer
+            Multimediedesign på UCL. Jeg brænder for branding, visuel identitet
+            og content creation og har altid været draget af det visuelle
+            univers, alt fra sociale medier og grafisk design til digitale
+            oplevelser.
+          </p>
+
+          <p>
+            Ved siden af studiet driver jeg min egen virksomhed, SWLASHES, hvor
+            jeg arbejder med branding, content creation og visuel identitet. Jeg
+            har også erfaring med sociale medier, hjemmesider og digital
+            kommunikation gennem tidligere arbejde som SoMe-ansvarlig.
+          </p>
+
+          <p>
+            Jeg elsker at arbejde med detaljer, typografi, farver og stemninger
+            og skabe æstetiske løsninger, der både føles personlige og
+            professionelle.
+          </p>
+
+          <p>Lyder det som noget for jer?</p>
+
+          <a href="kontakt.html" class="hero-btn"> KONTAKT MIG HER </a>
+        </div>
+
+        <!-- BILLEDE -->
+        <div class="about-img"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Sille Wærnskjold-Thiesen</p>
+
+      <div class="footer-links">
+        <a href="./ommig.html">Om mig</a>
+        <a href="./index.html#projekter">Projekter</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sille Wærnskjold-Thiesen</p>
+      </div>
+    </footer>
+  </body>
+</html>
