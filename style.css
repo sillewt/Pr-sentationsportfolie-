@@ -224,9 +224,10 @@ body {
 }
 
 /* Billedet er et layoutbillede sat ind via CSS */
+/* Billedet over KOMPETENCER */
 .info-img {
   width: 100%;
-  height: 300px; /* ← ændr størrelse her */
+  height: 400px; /* ← ændr størrelse her */
   margin-bottom: 20px;
 
   background-image: url("billeder/mig10.jpg");
@@ -285,6 +286,7 @@ body {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  margin-bottom: 10px;
 }
 
 /* Tekst under projekter */
@@ -296,10 +298,10 @@ body {
 /* Lille tekst over overskrift, “MINE” */
 .overline {
   text-align: center;
-  font-size: 17px;
-  letter-spacing: 4px;
+  font-size: 22px;
+  letter-spacing: 8px;
   color: #999;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 /* Stor projekttitel */
@@ -307,13 +309,13 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 50px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Projekttitel under billede */
 .project-text h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -321,10 +323,13 @@ body {
 
 /* Projektbeskrivelse */
 .project-text p {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 300;
+  line-height: 1.8;
   letter-spacing: 1px;
   color: #666;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
 
 /* Fjerner standard link-styling og gør hele projektkortet klikbart */
@@ -505,8 +510,8 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 /* Stor overskrift ligesom projekter */
 .programmer h2 {
   font-family: "Playfair Display", serif;
-  font-size: 82px;
-  line-height: 1;
+  font-size: 50px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -615,12 +620,14 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 /* PROJEKTSIDER */
 /* ----------------------------------- */
 
+/* Hero-sektion øverst på projektsiden */
 .ppage-hero {
   padding: 40px 8% 70px;
 
   background-color: #f7f6f2;
 }
 
+/* Wrapper til projektbillede */
 .ppage-image {
   display: flex;
   justify-content: center;
@@ -628,6 +635,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   margin-bottom: 20px;
 }
 
+/* Selve projektbilledet */
 .ppage-image img {
   width: 100%;
   max-width: 430px;
@@ -637,10 +645,12 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   display: block;
 }
 
+/* Tekstområde øverst */
 .ppage-text {
   text-align: center;
 }
 
+/* Lille label over overskriften */
 .ppage-label {
   font-family: "Montserrat", sans-serif;
 
@@ -655,6 +665,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   color: #8b8b8b;
 }
 
+/* Stor hovedoverskrift */
 .ppage-text h1 {
   font-family: "Playfair Display", serif;
 
@@ -671,6 +682,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   margin-bottom: 30px;
 }
 
+/* Brødtekst under overskrift */
 .ppage-text p {
   font-family: "Montserrat", sans-serif;
 
@@ -683,9 +695,18 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   color: #555;
 }
 
-/* SEKTION UNDER */
+/* ----------------------------------- */
+/* ---------SEKTION UNDER HERO-------- */
+/* ------UNDER ENKELT PROJEKTSIDE----- */
+/* ----------------------------------- */
 
+/* Denne styling gælder for ALT indholdet under hero-sektionen.
+OM PROJEKTET, DESIGNMÆSSIGE VALG, FAGLIGT UDBYTTE og knappen nederst */
 .ppage-content {
+  /* Luft omkring hele området
+  luft i top = 20px
+  luft i siderne = 8%
+  luft i bund = 100px */
   padding: 20px 8% 100px;
 
   display: flex;
@@ -694,77 +715,48 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   gap: 70px;
 }
 
-.ppage-content h2 {
-  font-family: "Playfair Display", serif;
-
-  font-size: 46px;
-
-  font-weight: 500;
-
-  line-height: 1;
-
-  margin-bottom: 28px;
-
-  text-align: center;
-}
-
-.ppage-content p {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 14px;
-
-  font-weight: 300;
-
-  line-height: 2.1;
-
-  letter-spacing: 0.8px;
-
-  text-align: center;
-
-  color: #5c5c5c;
-
-  max-width: 320px;
-
-  margin: 0 auto;
-}
-
+/* ----------------------------------- */
 /* SEKTIONER */
+/* ----------------------------------- */
+
+/* Container omkring hver tekstsektion
+fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 .ppage-box {
   width: 90%;
 
   margin: 0 auto;
 }
 
-/* OVERSKRIFTER */
+/* Overskrifter: OM PROJEKTET, DESIGNMÆSSIGE VALG & FAGLIGT UDBYTTE */
 .ppage-box h2 {
   font-family: "Playfair Display", serif;
 
-  font-size: 28px;
+  font-size: 22px;
 
   font-weight: 400;
 
-  line-height: 1.4;
+  line-height: 1.3;
 
-  letter-spacing: 10px;
+  letter-spacing: 6px;
 
   text-transform: uppercase;
 
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   text-align: left;
 }
 
-/* BRØDTEKST */
+/* Brødtekst under OM PROJEKTET-overskrifterne */
 .ppage-box p {
   font-family: "Montserrat", sans-serif;
 
-  font-size: 17px;
+  font-size: 15px;
 
   font-weight: 300;
 
-  line-height: 2;
+  line-height: 1.8;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 
   color: #5a5a5a;
 
@@ -773,6 +765,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   max-width: none;
 }
 
+/* Linje mellem overskrift og content */
 .ppage-divider {
   width: 500px;
 
@@ -783,12 +776,14 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   margin: 30px 0 60px 11%;
 }
 
-/* KNAP PÅ PROJEKTSIDE */
+/* Knap nederst på projektsiden */
 .ppage-content .hero-btn {
   display: inline-flex;
 
+  /* Gør knappen lige så bred som teksten */
   width: fit-content;
 
+  /* Luft inde i knappen */
   padding: 18px 34px;
 
   margin-left: 0;
@@ -800,6 +795,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   letter-spacing: 2px;
 }
 
+/* Luft under sidste sektion */
 .ppage-box:last-child {
   margin-bottom: 50px;
 }
@@ -1066,208 +1062,218 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   .about-img {
     margin-top: 0;
   }
-}
 
-/* Stor hovedoverskrift "OM MIG" */
-.about-text h1 {
-  font-size: 72px;
-  /* Luft under overskriften */
-  margin-bottom: 20px;
-}
+  /* Stor hovedoverskrift "OM MIG" */
+  .about-text h1 {
+    font-size: 72px;
+    /* Luft under overskriften */
+    margin-bottom: 20px;
+  }
 
-/* Navn under overskriften */
-.about-text h3 {
-  font-size: 52px;
-  /* Luft mellem navn og brødtekst */
-  margin-bottom: 35px;
-  /* Gør teksten mindre fed */
-  font-weight: 400;
-}
+  /* Navn under overskriften */
+  .about-text h3 {
+    font-size: 52px;
+    /* Luft mellem navn og brødtekst */
+    margin-bottom: 35px;
+    /* Gør teksten mindre fed */
+    font-weight: 400;
+  }
 
-/* Brødtekst på om mig siden */
-.about-text p {
-  font-size: 18px;
-  /* Gør teksten mere læsevenlig */
-  line-height: 1.9;
-  /* Lille afstand mellem bogstaver */
-  letter-spacing: 0.5px;
-}
+  /* Brødtekst på om mig siden */
+  .about-text p {
+    font-size: 18px;
+    /* Gør teksten mere læsevenlig */
+    line-height: 1.9;
+    /* Lille afstand mellem bogstaver */
+    letter-spacing: 0.5px;
+  }
 
-/* stor tekst under projektbiller */
-.project-text h3 {
-  font-size: 18px;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-/* lille tekst under projektbiller  */
-.project-text p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+  /* stor tekst under projektbiller */
+  .project-text h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  /* lille tekst under projektbiller  */
+  .project-text p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
 
-/* styler “MINE“ tekst under projekter på desktop  */
-.overline {
-  font-size: 22px;
-  letter-spacing: 8px;
-}
+  /* styler “MINE“ tekst under projekter på desktop  */
+  .overline {
+    font-size: 22px;
+    letter-spacing: 8px;
+  }
 
-/* styler “PROJEKTER“ overskrift under projekter på desktop  */
-.projekter h2 {
-  font-size: 82px;
-  line-height: 1;
-  margin-bottom: 40px;
-}
+  /* styler “PROJEKTER“ overskrift under projekter på desktop  */
+  .projekter h2 {
+    font-size: 82px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
 
-/* PROGRAMMER - desktop layout */
-.program-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* PROGRAMMER - desktop layout */
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-  /* Mere luft mellem logoerne */
-  gap: 90px 120px;
+    /* Mere luft mellem logoerne */
+    gap: 90px 120px;
 
-  /* Gør sektionen bredere */
-  max-width: 1250px;
+    /* Gør sektionen bredere */
+    max-width: 1250px;
 
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
-/* Gør logoerne større på desktop */
-.program-card img {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
+  /* Gør logoerne større på desktop */
+  .program-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
 
-  margin-bottom: 22px;
-}
+    margin-bottom: 22px;
+  }
 
-/* Gør teksten større under logoerne */
-.program-card p {
-  font-size: 22px;
-  letter-spacing: 3px;
-}
+  /* Gør teksten større under logoerne */
+  .program-card p {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
 
-/* ----------------------------------- */
-/* PROJEKTSIDER */
-/* ----------------------------------- */
-/* Hele indholdsområdet på projektsiden */
-.ppage-content {
-  padding: 100px 0;
+  .programmer-text {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #666;
 
-  /* Lægger elementerne under hinanden */
-  display: flex;
-  flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto 60px;
+  }
 
-  /* Luft mellem sektionerne */
-  gap: 60px;
+  /* ----------------------------------- */
+  /* PROJEKTSIDER */
+  /* ----------------------------------- */
+  /* Hele indholdsområdet på projektsiden */
+  .ppage-content {
+    padding: 100px 0;
 
-  /* Maks bredde på indholdet */
-  max-width: 900px;
+    /* Lægger elementerne under hinanden */
+    display: flex;
+    flex-direction: column;
 
-  /* Centrerer hele sektionen */
-  margin: 0 auto;
-}
+    /* Luft mellem sektionerne */
+    gap: 60px;
 
-/* Container til projektbilledet */
-.ppage-image {
-  margin-bottom: 0;
-}
+    /* Maks bredde på indholdet */
+    max-width: 900px;
 
-/* Selve projektbilledet */
-.ppage-image img {
-  /* Maks størrelse på billedet */
-  max-width: 550px;
-  /* Luft under billedet */
-  margin-bottom: 20px;
-}
+    /* Centrerer hele sektionen */
+    margin: 0 auto;
+  }
 
-/* Lille tekst over overskriften - Portfolio projekt - */
-.ppage-label {
-  /* Gør teksten til store bogstaver */
-  text-transform: uppercase;
-  /* Afstand mellem bogstaver */
-  letter-spacing: 2px;
-}
+  /* Container til projektbilledet */
+  .ppage-image {
+    margin-bottom: 0;
+  }
 
-/* Stor hovedoverskrift - title navn på projekt */
-.ppage-text h1 {
-  /* Størrelse på overskriften */
-  font-size: 70px;
-  /* Ingen ekstra bogstavafstand */
-  letter-spacing: 0;
-}
+  /* Selve projektbilledet */
+  .ppage-image img {
+    /* Maks størrelse på billedet */
+    max-width: 550px;
+    /* Luft under billedet */
+    margin-bottom: 20px;
+  }
 
-/* Tekstområde øverst i en box */
-.ppage-text {
-  /* Fylder hele bredden */
-  width: 100%;
-  /* Maks bredde */
-  max-width: 900px;
+  /* Lille tekst over overskriften - Portfolio projekt - */
+  .ppage-label {
+    /* Gør teksten til store bogstaver */
+    text-transform: uppercase;
+    /* Afstand mellem bogstaver */
+    letter-spacing: 2px;
+  }
 
-  /* Centrerer tekstboksen */
-  margin: 0 auto;
+  /* Stor hovedoverskrift - title navn på projekt */
+  .ppage-text h1 {
+    /* Størrelse på overskriften */
+    font-size: 70px;
+    /* Ingen ekstra bogstavafstand */
+    letter-spacing: 0;
+  }
 
-  text-align: center;
-}
+  /* Tekstområde øverst i en box */
+  .ppage-text {
+    /* Fylder hele bredden */
+    width: 100%;
+    /* Maks bredde */
+    max-width: 900px;
 
-/* Brødtekst under overskriften */
-.ppage-text p {
-  /* Normal bogstavafstand */
-  letter-spacing: 0;
-  font-size: 20px;
-}
+    /* Centrerer tekstboksen */
+    margin: 0 auto;
 
-/* Den tynde linje mellem sektionerne */
-.ppage-divider {
-  /* Bredden på linjen */
-  width: 700px;
+    text-align: center;
+  }
 
-  /* Sørger for at den ikke går udenfor mobilen */
-  max-width: 100%;
+  /* Brødtekst under overskriften */
+  .ppage-text p {
+    /* Normal bogstavafstand */
+    letter-spacing: 0;
+    font-size: 20px;
+  }
 
-  /* Højde på linjen */
-  height: 1px;
+  /* Den tynde linje mellem sektionerne */
+  .ppage-divider {
+    /* Bredden på linjen */
+    width: 700px;
 
-  background-color: #cfc7be;
+    /* Sørger for at den ikke går udenfor mobilen */
+    max-width: 100%;
 
-  /* Luft over og under + centrerer linjen */
-  margin: 70px auto;
-}
+    /* Højde på linjen */
+    height: 1px;
 
-/* Alt tekstindhold i indholdssektionen venstrestilles */
-.ppage-content h2,
-.ppage-content p {
-  text-align: left;
-}
+    background-color: #cfc7be;
 
-/* Boks til de nederste tekstsektioner */
-.ppage-box {
-  /* Bredde på tekstområdet */
-  width: 900px;
+    /* Luft over og under + centrerer linjen */
+    margin: 70px auto;
+  }
 
-  /* Responsiv på mindre skærme */
-  max-width: 100%;
+  /* Alt tekstindhold i indholdssektionen venstrestilles */
+  .ppage-content h2,
+  .ppage-content p {
+    text-align: left;
+  }
 
-  /* top: 0 right: auto bottom: 20px left: 19px */
-  margin: 0 auto 20px 19px;
-}
+  /* Boks til de nederste tekstsektioner */
+  .ppage-box {
+    /* Bredde på tekstområdet */
+    width: 900px;
 
-/* Overskrift i tekstboksene */
-.ppage-box h2 {
-  /* Venstrestiller overskriften */
-  text-align: left;
-  /* Fjerner ekstra venstre margin */
-  margin-left: 0;
-  /* Størrelse på overskrift */
-  font-size: 30px;
-}
+    /* Responsiv på mindre skærme */
+    max-width: 100%;
 
-/* Brødtekst i tekstboksene */
-.ppage-box p {
-  /* Venstrestiller teksten */
-  text-align: left;
-  /* Fjerner ekstra venstre margin */
-  margin-left: 0;
-  /* Størrelse på brødtekst */
-  font-size: 20px;
+    /* top: 0 right: auto bottom: 20px left: 19px */
+    margin: 0 auto 20px 19px;
+  }
+
+  /* Overskrift i tekstboksene */
+  .ppage-box h2 {
+    /* Venstrestiller overskriften */
+    text-align: left;
+    /* Fjerner ekstra venstre margin */
+    margin-left: 0;
+    /* Størrelse på overskrift */
+    font-size: 30px;
+  }
+
+  /* Brødtekst i tekstboksene */
+  .ppage-box p {
+    /* Venstrestiller teksten */
+    text-align: left;
+    /* Fjerner ekstra venstre margin */
+    margin-left: 0;
+    /* Størrelse på brødtekst */
+    font-size: 20px;
+  }
 }
