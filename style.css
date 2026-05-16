@@ -365,7 +365,8 @@ body {
   background-image: url("billeder/mig6.jpg");
   background-size: cover;
   /* % betyder hvilke del på billede man vil se */
-  background-position: center 55%;
+  /* Jo højere tal = jo mere ser man af højre side af billedet*/
+  background-position: 90% center;
 }
 
 /* CONTENT */
@@ -955,7 +956,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Styling og placering af kontaktbilledet på desktop */
   .kontakt-img {
     width: 100%;
-    height: 420px;
+    height: 445px;
 
     border: none;
     outline: none;
