@@ -527,15 +527,12 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   margin: 0 auto 60px;
 }
 
-/* Grid med 3 kolonner */
+/* Grid med 2 kolonner */
 .program-grid {
   display: grid;
-
-  /* 3 ikoner ved siden af hinanden */
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 60px 40px;
-  max-width: 900px;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px 25px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -556,8 +553,9 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 
 /* Tekst under logo */
 .program-card p {
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 /* Footer-sektion */
