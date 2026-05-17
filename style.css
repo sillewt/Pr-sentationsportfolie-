@@ -502,7 +502,8 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 
 /* Lille tekst over overskrift */
 .programmer .overline {
-  font-size: 22px;
+  text-align: center;
+  font-size: 17px;
   letter-spacing: 8px;
   color: #999;
   margin-bottom: 12px;
@@ -511,27 +512,27 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 /* Stor overskrift ligesom projekter */
 .programmer h2 {
   font-family: "Playfair Display", serif;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Tekst under PROGRAMMER */
 .programmer-text {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #666;
 
-  max-width: 700px;
+  max-width: 330px;
   margin: 0 auto 60px;
 }
 
-/* Grid med 2 kolonner */
+/* Grid med 1 kolonne på mobil */
 .program-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 45px 22px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -545,16 +546,17 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 
 /* Logoer */
 .program-card img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-bottom: 18px;
 }
 
 /* Tekst under logo */
 .program-card p {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
+  line-height: 1.4;
   text-align: center;
 }
 
