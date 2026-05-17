@@ -811,14 +811,18 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
   /* Giver siden en max-bredde og centrerer den */
   main {
-    max-width: 1500px;
+    max-width: 1250px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   /* Gør headeren lavere på desktop */
   .header {
-    padding: 18px 38px;
+    padding: 15px 30px;
+  }
+
+  .logo img {
+    height: 52px;
   }
 
   /* Navigationen i headeren på desktop */
@@ -828,15 +832,15 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     position: static;
     flex-direction: row;
     background: none;
-    gap: 36px;
+    gap: 28px;
     z-index: auto;
   }
 
   /* Styling af links i desktop-menuen */
   .nav a {
     color: #111;
-    font-size: 23px;
-    letter-spacing: 3px;
+    font-size: 17px;
+    letter-spacing: 2px;
   }
 
   /* Active styling på desktop gøres mere neutral */
@@ -849,10 +853,11 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   .nav a:last-child {
     background-color: #111;
     color: #fff;
-    padding: 14px 22px;
+    padding: 11px 18px;
     border-radius: 2px;
     letter-spacing: 2px;
   }
+
   /* Hover på sort CTA-knap */
   .nav a:last-child:hover {
     background-color: #cfc4b6;
@@ -864,19 +869,22 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     display: none;
   }
 
+  /* ----------------------------------- */
   /* Hero-sektion på forsiden */
   /* Hero-sektionen bliver lavet som et 2-kolonne layout på desktop */
+  /* ----------------------------------- */
   .hero {
     display: flex;
     flex-direction: row-reverse;
-    gap: 70px;
+    gap: 55px;
     align-items: center;
-    padding: 90px 38px;
+    padding: 40px 30px 50px;
   }
 
   /* Justerer størrelsen på forside-billedet */
   .hero-img {
-    width: 60%;
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 0;
   }
 
@@ -888,16 +896,17 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Styling af den store overskrift i hero-sektionen */
   .hero-text h1 {
     font-family: "Playfair Display", serif;
-    font-size: 50px;
-    line-height: 1.05;
+    font-size: 46px;
+    line-height: 1.1;
     letter-spacing: 1px;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   /* Styling af brødteksten i hero-sektionen */
   .hero-text p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.9;
+    margin-bottom: 35px;
   }
 
   /* Kompetence-sektion på forsiden */
@@ -905,14 +914,14 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 80px 38px;
+    gap: 45px;
+    padding: 70px 32px;
   }
 
   /* Justerer størrelsen på billedet i kompetence-sektionen */
   .info-img {
     width: 100%;
-    height: 520px;
+    height: 480px;
     margin-bottom: 0;
   }
 
@@ -923,28 +932,29 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     justify-content: center;
   }
 
+  .info-text h2 {
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
+
   /* Styling af tekstlinjerne i info-sektionen */
   .info-text p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     letter-spacing: 2px;
-    padding: 25px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #e5e2dc;
-    text-transform: uppercase;
-    color: #111;
   }
 
   /* Projekter vises i 2 kolonner på desktop */
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 42px;
   }
 
   /* Kontakt desktop-layout */
   .kontakt {
     border-top: none;
-    outline: none;
     padding-top: 0;
   }
 
@@ -956,15 +966,11 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Styling og placering af kontaktbilledet på desktop */
   .kontakt-img {
     width: 100%;
-    height: 445px;
-
-    border: none;
-    outline: none;
-    box-shadow: none;
-
+    height: 330px;
     margin-bottom: 10px;
     margin-top: -10px;
   }
+
   /* Sørger for at kontaktindholdet fylder hele containeren */
   .kontakt-content {
     max-width: 100%;
@@ -972,8 +978,8 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
   /* kontakt mig overskrift*/
   .kontakt-content h2 {
-    font-size: 100px;
-    margin-bottom: 45px;
+    font-size: 52px;
+    margin-bottom: 28px;
   }
 
   /* Kontaktinfo lægges i grid på desktop */
@@ -1002,14 +1008,14 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
   /* Styling af overskrifter som Adresse, Mail og Telefonnummer */
   .kontakt-item h4 {
-    font-size: 17px;
-    letter-spacing: 6px;
+    font-size: 13px;
+    letter-spacing: 4px;
     margin-bottom: 10px;
   }
 
   /* Styling af selve kontaktteksten */
   .kontakt-item p {
-    font-size: 22px;
+    font-size: 15px;
     line-height: 1.8;
   }
 
@@ -1018,139 +1024,147 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    margin-top: -40px;
+    margin-top: -20px;
   }
 
   /* Sociale ikoner placeres i højre kolonne og justeres visuelt */
   .kontakt-icons {
     display: flex;
     justify-content: flex-start;
-    gap: 28px;
-
+    gap: 24px;
     grid-column: 2;
-
-    margin-top: -70px;
-    padding-left: 25px;
+    margin-top: -80px;
+    padding-left: 30px;
   }
 
   /* Gør ikonerne større på desktop */
   .kontakt-icons a {
-    font-size: 42px;
+    font-size: 26px;
   }
 
   /* CTA-link placeres nederst i højre side */
   .kontakt-cta {
     grid-column: 2;
     justify-self: end;
-    margin-top: 1px;
-
-    font-size: 13px;
-    letter-spacing: 6px;
+    margin-top: -35px;
+    font-size: 11px;
+    letter-spacing: 3px;
   }
 
+  /* ----------------------------------- */
+  /* --------------OM MIG--------------- */
+  /* ----------------------------------- */
   /* Om mig siden bliver 2 kolonner på desktop */
   .about-page {
     display: grid;
     /* Laver 2 lige store kolonner */
     grid-template-columns: 1fr 1fr;
     /* Afstand mellem tekst og billede */
-    gap: 55px;
+    gap: 45px;
     /* Sørger for at tekst og billede starter øverst */
     align-items: start;
+    padding: 45px 32px 60px;
   }
 
   /* Fjerner ekstra luft over billedet på desktop */
   .about-img {
+    max-width: 480px;
+    justify-self: end;
     margin-top: 0;
   }
 
   /* Stor hovedoverskrift "OM MIG" */
   .about-text h1 {
-    font-size: 72px;
+    font-size: 50px;
     /* Luft under overskriften */
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   /* Navn under overskriften */
   .about-text h3 {
-    font-size: 52px;
+    font-size: 34px;
     /* Luft mellem navn og brødtekst */
-    margin-bottom: 35px;
+    margin-bottom: 24px;
     /* Gør teksten mindre fed */
     font-weight: 400;
   }
 
   /* Brødtekst på om mig siden */
   .about-text p {
-    font-size: 18px;
+    font-size: 15px;
     /* Gør teksten mere læsevenlig */
-    line-height: 1.9;
+    line-height: 1.5;
     /* Lille afstand mellem bogstaver */
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    margin-bottom: 18px;
   }
 
   /* stor tekst under projektbiller */
   .project-text h3 {
-    font-size: 20px;
-    letter-spacing: 3px;
+    font-size: 18px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
   }
+
   /* lille tekst under projektbiller  */
   .project-text p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
   }
 
   /* styler “MINE“ tekst under projekter på desktop  */
   .overline {
-    font-size: 22px;
-    letter-spacing: 8px;
+    font-size: 18px;
+    letter-spacing: 7px;
   }
 
   /* styler “PROJEKTER“ overskrift under projekter på desktop  */
   .projekter h2 {
-    font-size: 82px;
+    font-size: 68px;
     line-height: 1;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+  }
+  /* ----------------------------------- */
+  /* -----PROGRAMMER - desktop layout--- */
+  /* ----------------------------------- */
+
+  .programmer h2 {
+    font-size: 68px;
   }
 
-  /* PROGRAMMER - desktop layout */
   .program-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
     /* Mere luft mellem logoerne */
-    gap: 90px 120px;
+    gap: 65px 80px;
 
     /* Gør sektionen bredere */
-    max-width: 1250px;
+    max-width: 1000px;
 
     margin: 0 auto;
   }
 
   /* Gør logoerne større på desktop */
   .program-card img {
-    width: 130px;
-    height: 130px;
+    width: 105px;
+    height: 105px;
     object-fit: contain;
 
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   /* Gør teksten større under logoerne */
   .program-card p {
-    font-size: 22px;
-    letter-spacing: 3px;
+    font-size: 18px;
+    letter-spacing: 2px;
   }
 
   .programmer-text {
-    font-size: 17px;
-    font-weight: 300;
+    font-size: 16px;
     line-height: 1.8;
-    color: #666;
-
-    max-width: 700px;
-    margin: 0 auto 60px;
+    max-width: 650px;
+    margin: 0 auto 55px;
   }
 
   /* ----------------------------------- */
@@ -1158,17 +1172,17 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* ----------------------------------- */
   /* Hele indholdsområdet på projektsiden */
   .ppage-content {
-    padding: 100px 0;
+    padding: 80px 0;
 
     /* Lægger elementerne under hinanden */
     display: flex;
     flex-direction: column;
 
     /* Luft mellem sektionerne */
-    gap: 60px;
+    gap: 55px;
 
     /* Maks bredde på indholdet */
-    max-width: 900px;
+    max-width: 850px;
 
     /* Centrerer hele sektionen */
     margin: 0 auto;
@@ -1182,9 +1196,9 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Selve projektbilledet */
   .ppage-image img {
     /* Maks størrelse på billedet */
-    max-width: 550px;
+    max-width: 500px;
     /* Luft under billedet */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   /* Lille tekst over overskriften - Portfolio projekt - */
@@ -1198,7 +1212,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Stor hovedoverskrift - title navn på projekt */
   .ppage-text h1 {
     /* Størrelse på overskriften */
-    font-size: 70px;
+    font-size: 55px;
     /* Ingen ekstra bogstavafstand */
     letter-spacing: 0;
   }
@@ -1218,15 +1232,14 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
   /* Brødtekst under overskriften */
   .ppage-text p {
-    /* Normal bogstavafstand */
-    letter-spacing: 0;
-    font-size: 20px;
+    font-size: 17px;
+    line-height: 1.9;
   }
 
   /* Den tynde linje mellem sektionerne */
   .ppage-divider {
     /* Bredden på linjen */
-    width: 700px;
+    width: 650px;
 
     /* Sørger for at den ikke går udenfor mobilen */
     max-width: 100%;
@@ -1237,7 +1250,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     background-color: #cfc7be;
 
     /* Luft over og under + centrerer linjen */
-    margin: 70px auto;
+    margin: 60px auto;
   }
 
   /* Alt tekstindhold i indholdssektionen venstrestilles */
@@ -1249,13 +1262,12 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   /* Boks til de nederste tekstsektioner */
   .ppage-box {
     /* Bredde på tekstområdet */
-    width: 900px;
+    width: 850px;
 
     /* Responsiv på mindre skærme */
     max-width: 100%;
 
-    /* top: 0 right: auto bottom: 20px left: 19px */
-    margin: 0 auto 20px 19px;
+    margin: 0 auto;
   }
 
   /* Overskrift i tekstboksene */
@@ -1265,7 +1277,8 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     /* Fjerner ekstra venstre margin */
     margin-left: 0;
     /* Størrelse på overskrift */
-    font-size: 30px;
+    font-size: 24px;
+    margin-bottom: 14px;
   }
 
   /* Brødtekst i tekstboksene */
@@ -1275,6 +1288,8 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     /* Fjerner ekstra venstre margin */
     margin-left: 0;
     /* Størrelse på brødtekst */
-    font-size: 20px;
+    font-size: 17px;
+
+    line-height: 1.9;
   }
 }
