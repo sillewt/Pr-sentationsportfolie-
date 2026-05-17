@@ -366,14 +366,15 @@ body {
   background-size: cover;
   /* % betyder hvilke del på billede man vil se */
   /* Jo højere tal = jo mere ser man af højre side af billedet*/
-  background-position: 90% center;
+  background-position: 85% center;
 }
 
 /* CONTENT */
 /* Kontaktoverskrift */
 .kontakt-content h2 {
   font-family: "Playfair Display", serif;
-  font-size: 65px;
+  font-size: 48px;
+  line-height: 1.1;
   margin-bottom: 35px;
 }
 
