@@ -624,7 +624,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 
 /* Hero-sektion øverst på projektsiden */
 .ppage-hero {
-  padding: 40px 8% 70px;
+  padding: 40px 8% 30px;
 
   background-color: #f7f6f2;
 }
@@ -779,7 +779,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
   background-color: #cfc7be;
 
-  margin: 20px auto 20px auto;
+  margin: 30px auto 30px auto;
 }
 
 /* Knap nederst på projektsiden */
