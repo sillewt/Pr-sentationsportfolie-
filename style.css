@@ -671,7 +671,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 .ppage-text h1 {
   font-family: "Playfair Display", serif;
 
-  font-size: 58px;
+  font-size: 44px;
 
   font-weight: 500;
 
@@ -682,6 +682,10 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
   text-transform: uppercase;
 
   margin-bottom: 30px;
+}
+
+h1.illustration-title {
+  font-size: 60px !important;
 }
 
 /* Brødtekst under overskrift */
@@ -769,7 +773,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
 
 /* Linje mellem overskrift og content */
 .ppage-divider {
-  width: 500px;
+  width: 100%;
 
   height: 1px;
 
