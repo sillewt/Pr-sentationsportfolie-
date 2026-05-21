@@ -172,7 +172,7 @@ body {
   border: none;
   margin-bottom: 45px;
 
-  background-image: url("billeder/mig9.jpg");
+  background-image: url("billeder/mig9.webp");
   background-size: cover;
   background-position: center;
 }
@@ -230,7 +230,7 @@ body {
   height: 400px; /* ← ændr størrelse her */
   margin-bottom: 20px;
 
-  background-image: url("billeder/mig10.jpg");
+  background-image: url("billeder/mig10.webp");
   background-size: cover;
   background-position: center;
 }
@@ -362,7 +362,7 @@ body {
   height: 380px;
   margin-bottom: 20px;
 
-  background-image: url("billeder/mig6.jpg");
+  background-image: url("billeder/mig6.webp");
   background-size: cover;
   /* % betyder hvilke del på billede man vil se */
   /* Jo højere tal = jo mere ser man af højre side af billedet*/
@@ -488,7 +488,7 @@ at have kontrol over størrelse, beskæring og responsivt layout.*/
 .about-img {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background-image: url("billeder/mig8.jpg");
+  background-image: url("billeder/mig8.webp");
   background-size: cover;
   background-position: center;
   margin-top: 40px;
