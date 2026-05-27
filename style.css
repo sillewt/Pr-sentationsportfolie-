@@ -419,7 +419,7 @@ body {
   color: #111; /* gør teksten sort */
   text-decoration: none; /* fjerner default underline */
 
-  border-bottom: 1px solid #111; /* din egen streg */
+  border-bottom: 1px solid #111;
   padding-bottom: 6px;
 }
 
@@ -859,6 +859,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
     background-color: #111;
     color: #fff;
     padding: 11px 18px;
+    border: 1px solid #111;
     border-radius: 2px;
     letter-spacing: 2px;
   }
@@ -867,6 +868,7 @@ fx: OM PROJEKTET, DESIGNMÆSSIGE VALG osv. */
   .nav a:last-child:hover {
     background-color: #cfc4b6;
     color: #111;
+    border: 1px solid #111;
   }
 
   /* Fjerner underline-effekten fra CTA-knappen */
