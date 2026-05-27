@@ -371,7 +371,7 @@ body {
 
 /* CONTENT */
 /* Kontaktoverskrift */
-.kontakt-content h2 {
+.kontakt-content h1 {
   font-family: "Playfair Display", serif;
   font-size: 48px;
   line-height: 1.1;
@@ -393,7 +393,7 @@ body {
 }
 
 /* Små labels som Adresse, Mail, Telefonnummer */
-.kontakt-item h4 {
+.kontakt-item h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   letter-spacing: 4px;
